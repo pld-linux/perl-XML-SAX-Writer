@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
@@ -15,7 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d8c80d6538562925a96ce1c6e00d7f20
 BuildRequires:	perl-devel >= 5.6
-%{!?_without_tests:BuildRequires:	perl-Test-Simple >= 0.40}
+%{?with_tests:BuildRequires:	perl-Test-Simple >= 0.40}
 BuildRequires:	perl-Text-Iconv >= 1.2
 BuildRequires:	perl-XML-Filter-BufferText >= 0.01
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
@@ -43,12 +43,13 @@ Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
