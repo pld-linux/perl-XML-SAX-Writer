@@ -9,7 +9,7 @@ Summary:	XML::SAX::Writer Perl module - SAX2 XML Writer
 Summary(pl):	Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2
 Name:		perl-XML-SAX-Writer
 Version:	0.44
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -20,7 +20,7 @@ BuildRequires:	perl-XML-Filter-BufferText >= 0.01
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-XML-SAX
 BuildRequires:	perl(XML::SAX::Exception) >= 1.01
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Text-Iconv >= 1.2
 Requires:	perl-XML-Filter-BufferText >= 0.01
 Requires:	perl-XML-NamespaceSupport >= 0.03
@@ -38,7 +38,8 @@ Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -54,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/XML/SAX/Writer.pm
-%{perl_sitelib}/XML/SAX/Writer
+%{perl_vendorlib}/XML/SAX/Writer.pm
+%{perl_vendorlib}/XML/SAX/Writer
 %{_mandir}/man3/*
