@@ -10,7 +10,8 @@ Summary(pl):	Modu³ Perla XML::SAX::Writer - zapis XML-u z SAX2
 Name:		perl-XML-SAX-Writer
 Version:	0.44
 Release:	2
-License:	Artistic or GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d8c80d6538562925a96ce1c6e00d7f20
