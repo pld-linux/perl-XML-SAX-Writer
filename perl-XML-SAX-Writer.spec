@@ -1,13 +1,14 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	SAX-Writer
 Summary:	XML::SAX::Writer Perl module - SAX2 XML Writer
 Summary(pl):	Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2
 Name:		perl-XML-SAX-Writer
-Version:	0.42
+Version:	0.44
 Release:	1
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
@@ -45,8 +46,7 @@ perl Makefile.PL
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
