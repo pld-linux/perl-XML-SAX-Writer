@@ -38,7 +38,7 @@ Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{!?_without_tests:%{__make} test}
