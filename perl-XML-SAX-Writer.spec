@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	XML
-%define		pnam	SAX-Writer
+%define	pdir	XML
+%define	pnam	SAX-Writer
 Summary:	XML::SAX::Writer Perl module - SAX2 XML writer
 Summary(pl):	Modu³ Perla XML::SAX::Writer - zapis w XML-u z SAX2
 Name:		perl-XML-SAX-Writer
