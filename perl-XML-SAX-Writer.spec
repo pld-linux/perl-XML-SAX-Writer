@@ -20,7 +20,7 @@ BuildRequires:	perl-XML-Filter-BufferText >= 0.01
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-XML-SAX
 BuildRequires:	perl(XML::SAX::Exception) >= 1.01
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Requires:	perl-Text-Iconv >= 1.2
 Requires:	perl-XML-Filter-BufferText >= 0.01
 Requires:	perl-XML-NamespaceSupport >= 0.03
