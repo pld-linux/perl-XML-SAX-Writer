@@ -9,7 +9,7 @@ Summary:	XML::SAX::Writer Perl module - SAX2 XML Writer
 Summary(pl):	Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2
 Name:		perl-XML-SAX-Writer
 Version:	0.44
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
