@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	SAX-Writer
-Summary:	XML::SAX::Writer Perl module - SAX2 XML Writer
-Summary(pl):	Modu³ Perla XML::SAX::Writer - zapisuj±cy XML z SAX2
+Summary:	XML::SAX::Writer Perl module - SAX2 XML writer
+Summary(pl):	Modu³ Perla XML::SAX::Writer - zapis XML-u z SAX2
 Name:		perl-XML-SAX-Writer
 Version:	0.44
 Release:	2
