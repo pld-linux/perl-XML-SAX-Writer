@@ -5,16 +5,16 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	SAX-Writer
-Summary:	XML::SAX::Writer Perl module - SAX2 XML writer
-Summary(pl):	Modu³ Perla XML::SAX::Writer - zapis w XML-u z SAX2
+Summary:	XML::SAX::Writer - SAX2 XML writer
+Summary(pl):	XML::SAX::Writer - zapis w XML-u z SAX2
 Name:		perl-XML-SAX-Writer
-Version:	0.44
-Release:	3
+Version:	0.50
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d8c80d6538562925a96ce1c6e00d7f20
+# Source0-md5:	bf26550e84903ef36af0feb07d721d4e
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_tests:BuildRequires:	perl-Test-Simple >= 0.40}
 BuildRequires:	perl-Text-Iconv >= 1.2
