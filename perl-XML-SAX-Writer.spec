@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	SAX-Writer
 Summary:	XML::SAX::Writer - SAX2 XML writer
-Summary(pl):	XML::SAX::Writer - zapis w XML-u z SAX2
+Summary(pl.UTF-8):   XML::SAX::Writer - zapis w XML-u z SAX2
 Name:		perl-XML-SAX-Writer
 Version:	0.50
 Release:	1
@@ -33,8 +33,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 XML::SAX::Writer Perl module - SAX2 XML Writer.
 
-%description -l pl
-Modu³ Perla XML::SAX::Writer - zapisuj±cy w XML-u z SAX2.
+%description -l pl.UTF-8
+ModuÅ‚ Perla XML::SAX::Writer - zapisujÄ…cy w XML-u z SAX2.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
