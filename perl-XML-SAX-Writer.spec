@@ -8,13 +8,13 @@
 Summary:	XML::SAX::Writer - SAX2 XML writer
 Summary(pl.UTF-8):	XML::SAX::Writer - zapis w XML-u z SAX2
 Name:		perl-XML-SAX-Writer
-Version:	0.52
+Version:	0.53
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	887c57d30e406607463f65febd62f1bc
+# Source0-md5:	afc83cdc49ccc8a7ad72911b2a0bcfbe
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_tests:BuildRequires:	perl-Test-Simple >= 0.40}
 BuildRequires:	perl-Text-Iconv >= 1.2
