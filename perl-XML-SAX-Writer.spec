@@ -13,8 +13,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	afc83cdc49ccc8a7ad72911b2a0bcfbe
+URL:		http://search.cpan.org/dist/XML-SAX-Writer/
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_tests:BuildRequires:	perl-Test-Simple >= 0.40}
 BuildRequires:	perl-Text-Iconv >= 1.2
@@ -60,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/XML/SAX/Writer.pm
 %{perl_vendorlib}/XML/SAX/Writer
-%{_mandir}/man3/*
+%{_mandir}/man3/XML::SAX::Writer*.3pm*
