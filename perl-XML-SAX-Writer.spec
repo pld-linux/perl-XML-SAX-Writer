@@ -1,20 +1,21 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	XML
 %define		pnam	SAX-Writer
 Summary:	XML::SAX::Writer - SAX2 XML writer
 Summary(pl.UTF-8):	XML::SAX::Writer - zapis w XML-u z SAX2
 Name:		perl-XML-SAX-Writer
-Version:	0.56
+Version:	0.57
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e5fa5e2b2f6867b1aca9b5b43e1ce361
-URL:		http://search.cpan.org/dist/XML-SAX-Writer/
+Source0:	https://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	3e3023c648e3003c04de2fb04435f8bd
+URL:		https://metacpan.org/dist/XML-SAX-Writer
+BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Encode >= 2.12
@@ -22,13 +23,15 @@ BuildRequires:	perl-Test-Simple >= 0.40
 BuildRequires:	perl-XML-Filter-BufferText >= 1.00
 BuildRequires:	perl-XML-NamespaceSupport >= 1.00
 BuildRequires:	perl-XML-SAX
-BuildRequires:	perl(XML::SAX::Exception) >= 1.01
+# perl(XML::SAX::Exception) >= 1.01
+BuildRequires:	perl-XML-SAX-Base >= 1.01
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-Encode >= 2.12
 Requires:	perl-XML-Filter-BufferText >= 1.00
 Requires:	perl-XML-NamespaceSupport >= 1.00
-Requires:	perl(XML::SAX::Exception) >= 1.01
+Requires:	perl-XML-SAX-Base >= 1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,6 +47,7 @@ Moduł Perla XML::SAX::Writer - zapisujący w XML-u z SAX2.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make}
 
 %{?with_tests:%{__make} test}
